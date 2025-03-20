@@ -1,10 +1,21 @@
+<<<<<<< HEAD
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+>>>>>>> 05685eb (setting up project)
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
+<<<<<<< HEAD
   color: rgba(255, 255, 255, 0.87);
+=======
+  color: rgba(101, 64, 64, 0.87);
+>>>>>>> 05685eb (setting up project)
   background-color: #242424;
 
   font-synthesis: none;
