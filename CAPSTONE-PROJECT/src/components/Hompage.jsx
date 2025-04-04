@@ -29,11 +29,9 @@ const Home = () => {
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2 flex items-center">
-          <Newspaper className="mr-2" /> News Reader
+          <Newspaper className="mr-2" /> Welcome to Your Daily Source of News
         </h1>
-        <p className="text-gray-600 dark:text-gray-300">
-          Your source for the latest news across various categories
-        </p>
+        
       </div>
 
       {/* Category Tabs */}
