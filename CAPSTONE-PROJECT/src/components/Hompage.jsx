@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
-import { NewsContext } from './NewsContextComponent';
-import NewsCard from '../components/NewsCard';
+import { NewsContext } from '../components/NewsContext';
+import NewsCard from '../components/NewCard';
 import { Newspaper } from 'lucide-react';
 import LoadingSpinner from '../components/LoadingSpinner';
 
