@@ -1,6 +1,6 @@
 // services/newsApi.js
 
-const API_KEY = "b9fda8b2bb794c18b0b59e18cf2083e9" || 'YOUR_API_KEY'; // Replace with your actual API key
+const API_KEY = "b9fda8b2bb794c18b0b59e18cf2083e9" 
 const BASE_URL = 'https://newsapi.org/v2';
 
 // Function to fetch top headlines
