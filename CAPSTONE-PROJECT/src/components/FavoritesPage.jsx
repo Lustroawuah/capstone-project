@@ -10,15 +10,14 @@ const Favorites = () => {
     document.title = 'NewsReader - Favorites';
   }, []);
 
-  // Sort favorites by date added (newest first)
+  // Sorts favorites by date added (newest first)always
   const sortedFavorites = [...favorites].sort((a, b) => {
     return new Date(b.addedAt) - new Date(a.addedAt);
   });
 
-  // Clear all favorites
+  // Clears all favorites
   const clearAllFavorites = () => {
     if (window.confirm('Are you sure you want to remove all favorite articles?')) {
-      // This assumes you've added a clearFavorites function to your context
       sortedFavorites.forEach(article => removeFromFavorites(article.url));
     }
   };

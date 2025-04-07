@@ -19,7 +19,7 @@ const Home = () => {
     document.title = 'NewsReader - Home';
   }, []);
 
-  // Get news for the current category
+  // Gets news for the current category
   const displayNews = currentCategory === 'general' 
     ? headlines 
     : categoryNews[currentCategory] || [];

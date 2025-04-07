@@ -21,7 +21,7 @@ export const NewsProvider = ({ children }) => {
     'science'
   ];
 
-  // Load favorites from localStorage
+  // Loads favorites from localStorage
   useEffect(() => {
     const savedFavorites = localStorage.getItem('favorites');
     if (savedFavorites) {
@@ -29,12 +29,12 @@ export const NewsProvider = ({ children }) => {
     }
   }, []);
 
-  // Save favorites to localStorage when updated
+  // Saves favorites to localStorage when updated
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 
-  // Fetch headlines on mount
+  // Fetches headlines on mount
   useEffect(() => {
     const getTopHeadlines = async () => {
       try {
@@ -51,7 +51,7 @@ export const NewsProvider = ({ children }) => {
     getTopHeadlines();
   }, []);
 
-  // Fetch news by category
+  // Fetches news by category
   const loadCategoryNews = async (category) => {
     if (categoryNews[category]) return; // Already loaded
     
@@ -69,7 +69,7 @@ export const NewsProvider = ({ children }) => {
     }
   };
 
-  // Change current category
+  // Changes current category
   const changeCategory = (category) => {
     setCurrentCategory(category);
     if (!categoryNews[category]) {
@@ -91,7 +91,7 @@ export const NewsProvider = ({ children }) => {
     }
   };
 
-  // Add article to favorites
+  // Adds article to favorites
   const addToFavorites = (article) => {
     const exists = favorites.some(fav => fav.url === article.url);
     if (!exists) {
@@ -99,12 +99,12 @@ export const NewsProvider = ({ children }) => {
     }
   };
 
-  // Remove article from favorites
+  // Removes article from favorites
   const removeFromFavorites = (articleUrl) => {
     setFavorites(favorites.filter(article => article.url !== articleUrl));
   };
 
-  // Check if article is in favorites
+  // Checks if article is in favorites
   const isInFavorites = (articleUrl) => {
     return favorites.some(article => article.url === articleUrl);
   };

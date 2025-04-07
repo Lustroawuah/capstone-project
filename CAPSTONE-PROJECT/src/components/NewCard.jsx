@@ -6,15 +6,15 @@ import { NewsContext } from '../components/NewsContext';
 const NewsCard = ({ article, index }) => {
   const { addToFavorites, removeFromFavorites, isInFavorites } = useContext(NewsContext);
   
-  // Generate a unique ID for the article
+  // Generates a unique ID for the article
   const articleId = article.url ? 
     encodeURIComponent(article.url.split('/').pop() || index) 
     : index;
   
-  // Check if article is in favorites
+  // Checks if article is in favorites
   const favorite = isInFavorites(article.url);
   
-  // Format publication date
+  // Formats publication date
   const formatDate = (dateString) => {
     if (!dateString) return '';
     const date = new Date(dateString);
@@ -25,7 +25,7 @@ const NewsCard = ({ article, index }) => {
     });
   };
 
-  // Handle favorite toggle
+  // Handles favorite toggle
   const handleFavoriteToggle = (e) => {
     e.preventDefault();
     e.stopPropagation();
